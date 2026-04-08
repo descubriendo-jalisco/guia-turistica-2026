@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Lucha y Los Que Cuidan</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #ccc;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: linear-gradient(to bottom, #111 0%, #050505 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* Eje 1: La Lucha (Archivos/Carpetas acumuladas) */
+        .archivo-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 80px;
+        }
+
+        .expediente {
+            width: 280px;
+            height: 350px;
+            background-color: #d1c8b4;
+            color: #111;
+            padding: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+            position: relative;
+            transform: rotate(calc(-3deg + 6deg * var(--rand)));
+            transition: transform 0.3s ease;
+        }
+
+        .expediente:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 10;
+        }
+
+        .expediente-img {
+            width: 100%;
+            height: 150px;
+            background: #555;
+            margin-bottom: 15px;
+            filter: grayscale(100%);
+            object-fit: cover;
+        }
+
+        .sello-ignorado {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            color: rgba(139, 28, 49, 0.4);
+            font-size: 2rem;
+            font-weight: bold;
+            border: 3px solid rgba(139, 28, 49, 0.4);
+            padding: 5px 10px;
+            pointer-events: none;
+        }
+
+        /* Eje 2: Los Que Cuidan (Testimonios de la comunidad fragmentados) */
+        .comunidad-section {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 40px;
+            border-left: 2px solid #555;
+        }
+
+        .testimonio {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #bbb;
+        }
+
+        .testimonio span.autor {
+            display: block;
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 10px;
+            font-style: normal;
+        }
+
+        /* Enlace al fondo */
+        .deep-link-container {
+            text-align: center;
+            margin-top: 100px;
+            padding-bottom: 50px;
+        }
+
+        .deep-link {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            transition: color 1s;
+        }
+
+        .deep-link:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>La Lucha Constante</h1>
+        </header>
+
+        <!-- Representación visual de las carpetas de investigación reales estancadas -->
+        <div class="archivo-section">
+            <div class="expediente" style="--rand: 0.2">
+                <img class="expediente-img"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='150'><rect width='280' height='150' fill='%23666'/><text x='20' y='80' fill='white' font-family='sans-serif' font-size='12'>[DOCUMENTO REAL PLACEHOLDER]</text></svg>"
+                    alt="Evidencia">
+                <p><strong>C.I:</strong> 4829-Z</p>
+                <p>Fecha de desaparición: 12/05/2026</p>
+                <p style="font-size:0.8rem; color:#444;">Sin avances por parte de la fiscalía tras 8 meses.</p>
+                <div class="sello-ignorado">ARCHIVADO</div>
+            </div>
+
+            <div class="expediente" style="--rand: 0.8">
+                <img class="expediente-img"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='150'><rect width='280' height='150' fill='%23555'/><text x='20' y='80' fill='white' font-family='sans-serif' font-size='12'>[FOTO MANIFESTACIÓN PLACEHOLDER]</text></svg>"
+                    alt="Protesta">
+                <p>Marcha en la glorieta</p>
+                <p style="font-size:0.8rem; color:#444;">Registro fotográfico del colectivo exigiendo respuestas.</p>
+            </div>
+
+            <div class="expediente" style="--rand: 0.5">
+                <p><strong>NUEVA APERTURA</strong></p>
+                <p>Búsqueda en campo, zona periferia del estadio.</p>
+                <p style="font-size:0.8rem; color:#444;">Acompañamiento realizado sin seguridad estatal.</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <h2
+            style="font-size: 1.5rem; color: #888; border-bottom: 1px solid #333; padding-bottom: 10px; display:inline-block;">
+            Los que cuidan</h2>
+        <div class="comunidad-section">
+            <div class="testimonio">
+                <!-- Aquí irán los testimonios reales de familiares / soporte comunitario -->
+                "[Aquí se insertará testimonio real de la comunidad: vecinos, hermanos, la gente que prepara la comida
+                para las búsquedas, que difunde las fichas o que cuida mientras otros escarban la tierra]"
+                <span class="autor">- Red de Apoyo</span>
+            </div>
+            <div class="testimonio">
+                "[Aquí se insertará otro testimonio real que aborde el eje de los cuidados indirectos ante la omisión
+                del Estado]"
+                <span class="autor">- Familia Extendida</span>
+            </div>
+        </div>
+
+        <div class="deep-link-container">
+            <a href="memoria_viva.html" class="deep-link">lo que queda · la memoria</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

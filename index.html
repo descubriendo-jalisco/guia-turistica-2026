@@ -276,9 +276,9 @@
 
         .carousel-track {
             display: flex;
-            width: calc(300px * 6);
-            /* 6 slides x 300px ej */
-            animation: scrollCarousel 20s linear infinite;
+            width: calc(300px * 12);
+            /* 12 slides x 300px */
+            animation: scrollCarousel 40s linear infinite;
         }
 
         /* Pausar carrusel al pasar el mouse */
@@ -292,19 +292,18 @@
             }
 
             100% {
-                transform: translateX(calc(-300px * 3));
+                transform: translateX(calc(-300px * 6));
             }
-
-            /* Mover 3 slides para loop infinito si hay duplicados */
         }
 
         .carousel-slide {
             width: 300px;
-            height: 250px;
+            height: 450px;
             flex-shrink: 0;
             position: relative;
             cursor: crosshair;
             border-right: 2px solid #ddd;
+            overflow: hidden;
         }
 
         /* Imagen frontal turística */
@@ -320,40 +319,15 @@
             z-index: 2;
         }
 
-        /* Imagen trasera perturbadora (ficha) */
+        /* Imagen trasera perturbadora */
         .slide-back {
             width: 100%;
             height: 100%;
+            object-fit: cover;
             position: absolute;
             top: 0;
             left: 0;
-            background: #fff;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             z-index: 1;
-            font-family: Arial, sans-serif;
-            border: 2px solid black;
-        }
-
-        .slide-back img {
-            width: 80%;
-            height: 120px;
-            background: #333;
-            margin-bottom: 5px;
-        }
-
-        .slide-back strong {
-            color: black;
-            font-size: 1.1rem;
-        }
-
-        .slide-back small {
-            color: red;
-            font-size: 0.8rem;
-            font-weight: bold;
         }
 
         /* Efecto Hover: Ocultar front, mostrar ficha */
@@ -548,75 +522,55 @@
             <!-- SECCIÓN DE CARRUSEL -->
             <div class="carousel-container" title="Explora las maravillas de Jalisco">
                 <div class="carousel-track">
-                    <!-- Slide 1 -->
+                    <!-- Slides Originales -->
                     <div class="carousel-slide">
-                        <img class="slide-front"
-                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250'><rect width='300' height='250' fill='%236bb382'/><text x='50' y='125' fill='white' font-family='sans-serif' font-size='20'>PUEBLOS MÁGICOS</text></svg>"
-                            alt="Turismo">
-                        <div class="slide-back">
-                            <strong>¿LE HAS VISTO?</strong>
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150'><rect width='100' height='150' fill='%23222'/><text x='15' y='75' fill='white' font-family='sans-serif' font-size='10'>FOTO_MISSING_BN</text></svg>"
-                                alt="Foto">
-                            <small>Desaparecido: Tapalpa</small>
-                        </div>
+                        <img class="slide-front" src="FOTOS_CARRUSEL/CATEDRAL_1.png" alt="Catedral">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/CATEDRAL_2.png" alt="Catedral">
                     </div>
-                    <!-- Slide 2 -->
                     <div class="carousel-slide">
-                        <img class="slide-front"
-                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250'><rect width='300' height='250' fill='%235b8cb8'/><text x='70' y='125' fill='white' font-family='sans-serif' font-size='20'>PLAYAS SOLEADAS</text></svg>"
-                            alt="Turismo">
-                        <div class="slide-back">
-                            <strong>¿DÓNDE ESTÁ?</strong>
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150'><rect width='100' height='150' fill='%23222'/><text x='15' y='75' fill='white' font-family='sans-serif' font-size='10'>FOTO_MISSING_BN</text></svg>"
-                                alt="Foto">
-                            <small>Visto por última vez: Vallarta</small>
-                        </div>
+                        <img class="slide-front" src="FOTOS_CARRUSEL/DESA_1.png" alt="Desaparecido">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/DESA_2.png" alt="Desaparecido">
                     </div>
-                    <!-- Slide 3 -->
                     <div class="carousel-slide">
-                        <img class="slide-front"
-                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250'><rect width='300' height='250' fill='%23b3925d'/><text x='30' y='125' fill='white' font-family='sans-serif' font-size='20'>CULTURA MILENARIA</text></svg>"
-                            alt="Turismo">
-                        <div class="slide-back">
-                            <strong>TE BUSCAMOS</strong>
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150'><rect width='100' height='150' fill='%23222'/><text x='15' y='75' fill='white' font-family='sans-serif' font-size='10'>FOTO_MISSING_BN</text></svg>"
-                                alt="Foto">
-                            <small>No regresó del Estadio</small>
-                        </div>
+                        <img class="slide-front" src="FOTOS_CARRUSEL/HIDA_1.png" alt="Hidalgo">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/HIDA_2.png" alt="Hidalgo">
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-front" src="FOTOS_CARRUSEL/KIOSCO_1.png" alt="Kiosco">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/KIOSCO_2.png" alt="Kiosco">
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-front" src="FOTOS_CARRUSEL/PALACIO_1.png" alt="Palacio">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/PALACIO_2.png" alt="Palacio">
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-front" src="FOTOS_CARRUSEL/UDG_1.png" alt="UDG">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/UDG_2.png" alt="UDG">
                     </div>
                     <!-- Duplicados para Loop Infinito -->
                     <div class="carousel-slide">
-                        <img class="slide-front"
-                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250'><rect width='300' height='250' fill='%236bb382'/><text x='50' y='125' fill='white' font-family='sans-serif' font-size='20'>PUEBLOS MÁGICOS</text></svg>"
-                            alt="Turismo">
-                        <div class="slide-back">
-                            <strong>¿LE HAS VISTO?</strong>
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150'><rect width='100' height='150' fill='%23222'/><text x='15' y='75' fill='white' font-family='sans-serif' font-size='10'>FOTO_MISSING_BN</text></svg>"
-                                alt="Foto">
-                            <small>Edad: 21 años</small>
-                        </div>
+                        <img class="slide-front" src="FOTOS_CARRUSEL/CATEDRAL_1.png" alt="Catedral">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/CATEDRAL_2.png" alt="Catedral">
                     </div>
                     <div class="carousel-slide">
-                        <img class="slide-front"
-                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250'><rect width='300' height='250' fill='%235b8cb8'/><text x='70' y='125' fill='white' font-family='sans-serif' font-size='20'>PLAYAS SOLEADAS</text></svg>"
-                            alt="Turismo">
-                        <div class="slide-back">
-                            <strong>¿DÓNDE ESTÁ?</strong>
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150'><rect width='100' height='150' fill='%23222'/><text x='15' y='75' fill='white' font-family='sans-serif' font-size='10'>FOTO_MISSING_BN</text></svg>"
-                                alt="Foto">
-                            <small>Ayúdanos a encontrarla</small>
-                        </div>
+                        <img class="slide-front" src="FOTOS_CARRUSEL/DESA_1.png" alt="Desaparecido">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/DESA_2.png" alt="Desaparecido">
                     </div>
                     <div class="carousel-slide">
-                        <img class="slide-front"
-                            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250'><rect width='300' height='250' fill='%23b3925d'/><text x='30' y='125' fill='white' font-family='sans-serif' font-size='20'>CULTURA MILENARIA</text></svg>"
-                            alt="Turismo">
-                        <div class="slide-back">
-                            <strong>TE BUSCAMOS</strong>
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='150'><rect width='100' height='150' fill='%23222'/><text x='15' y='75' fill='white' font-family='sans-serif' font-size='10'>FOTO_MISSING_BN</text></svg>"
-                                alt="Foto">
-                            <small>Denuncia abierta</small>
-                        </div>
+                        <img class="slide-front" src="FOTOS_CARRUSEL/HIDA_1.png" alt="Hidalgo">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/HIDA_2.png" alt="Hidalgo">
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-front" src="FOTOS_CARRUSEL/KIOSCO_1.png" alt="Kiosco">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/KIOSCO_2.png" alt="Kiosco">
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-front" src="FOTOS_CARRUSEL/PALACIO_1.png" alt="Palacio">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/PALACIO_2.png" alt="Palacio">
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-front" src="FOTOS_CARRUSEL/UDG_1.png" alt="UDG">
+                        <img class="slide-back" src="FOTOS_CARRUSEL/UDG_2.png" alt="UDG">
                     </div>
                 </div>
             </div>
